@@ -23,7 +23,8 @@ jobs:
           pip install pytest addict pyyaml orjson pyzmq safetensors dill imageio python-dateutil \
             psutil pybase64 requests starlette msgspec pydantic tqdm ipython aiohttp einops \
             transformers sentencepiece compressed-tensors gguf diffusers \
-            cloudpickle cache-dit openai partial-json-parser triton packaging
+            cloudpickle cache-dit openai partial-json-parser triton packaging \
+            uvicorn imageio-ffmpeg tabulate
 
       - name: Run server-args and component-residency unit tests
         run: |
