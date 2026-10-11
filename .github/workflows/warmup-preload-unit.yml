@@ -24,7 +24,7 @@ jobs:
             psutil pybase64 requests starlette msgspec pydantic tqdm ipython aiohttp einops \
             transformers sentencepiece compressed-tensors gguf diffusers \
             cloudpickle cache-dit openai partial-json-parser triton packaging \
-            uvicorn imageio-ffmpeg tabulate
+            uvicorn imageio-ffmpeg tabulate fastapi opencv-python-headless
 
       - name: Run server-args and component-residency unit tests
         run: |
