@@ -25,10 +25,9 @@ jobs:
             transformers sentencepiece compressed-tensors gguf diffusers \
             cloudpickle cache-dit openai partial-json-parser triton packaging
 
-      - name: Run warmup preload unit tests
+      - name: Run server-args and component-residency unit tests
         run: |
           PYTHONPATH=python python -m pytest \
-            python/sglang/multimodal_gen/test/unit/test_server_args.py::TestWarmupPreload \
+            python/sglang/multimodal_gen/test/unit/test_server_args.py \
             python/sglang/multimodal_gen/test/unit/test_component_residency.py \
-            -q --tb=short -p no:cacheprovider \
-            -k "warmup_preload or WarmupPreload or honors_margin"
+            -q --tb=line -p no:cacheprovider
